@@ -1,0 +1,37 @@
+/*יישור כתיבת הטקסט מימין לשמאל והגדרת הגודל ל 30 פיקסלים*/
+body {
+    direction: rtl;
+    font-size: 30px;
+}
+
+/*מסגרת לטבלה*/
+table, tr, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/*בכל תא הטקסט מיושר למרכז ויש ריווח של 15 פיקסלים*/
+td {
+    text-align: center;
+    padding: 15px;
+}
+
+/*רקע השורה הראשונה*/
+tr:nth-child(1) {
+    background-color: antiquewhite;
+}
+
+/*רקע השורה השנייה*/
+tr:nth-child(2) {
+    background-color: azure;
+}
+
+/*רקע השורה השלישית*/
+tr:nth-child(3) {
+    background-color: beige;
+}
+
+/*רקע השורה הרביעית*/
+tr:nth-child(4) {
+    background-color: cornsilk;
+}

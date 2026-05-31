@@ -1,0 +1,21 @@
+table,
+tr,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 50%;
+    margin: 25px auto;
+
+    td {
+        padding: 8px;
+        text-align: center;
+    }
+
+    td.primary{
+        background-color: yellow;
+        font-weight: bold;
+    }
+}
