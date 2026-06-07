@@ -26,6 +26,13 @@ export function createUser(event) {
     let user = new User(full_name, email, dob, country, phone, password, confirm_password);
     console.log(user);
 
+    //שמירת נתונים
+    localStorage.setItem('user', JSON.stringify(user));
+
+    //שליפת נתונים 
+    let u = JSON.parse(localStorage.getItem('user'));
+    console.log(u.country);
+
     //ניקוי הטופס
     event.target.reset();
 }
