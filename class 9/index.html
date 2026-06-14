@@ -4,14 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch</title>
-    <script type="module" src="./scripts/main.js"></script>
+    <title>City Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <h1>Fetch Example</h1>
-    <input type="text" list="cities" style="width:fit-content"/>
-    <datalist id="cities"></datalist>
+    <div class="page">
+        <header class="hero">
+            <div class="hero-inner">
+                <h1>City Finder</h1>
+                <p class="subtitle">Quickly search cities using the dataset. Start typing to see suggestions.</p>
+
+                <div class="search-card">
+                    <label for="city-input" class="sr-only">Search cities</label>
+                    <input id="city-input" type="text" list="cities" placeholder="e.g. Tel Aviv" autocomplete="off" />
+                    <datalist id="cities"></datalist>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="info">
+                <h2>How it works</h2>
+                <p>Type any part of a city's name and choose from the suggestions. The UI is responsive and works on mobile.</p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <small>Made for class — improved visuals</small>
+        </footer>
+    </div>
+
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 
 </html>
