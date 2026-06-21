@@ -1,12 +1,18 @@
 import City from './models/city.js';
 
 export async function getAllCities() {
-    let response = await fetch("https://data.gov.il/api/3/action/datastore_search?resource_id=e9701dcb-9f1c-43bb-bd44-eb380ade542f");
-    let data = await response.json();
-    if (data.success)
-        createCitiesArray(data.result.records);
-    else
+    try{
+        let response = await fetch("https://data.gov.il/api/3/action/datastore_search?resource_id=e9701dcb-9f1c-43bb-bd44-eb380ade542f");
+        console.log('response --> ', response);
+        let data = await response.json();
+        console.log('data --> ', data);
+        if (data.success)
+            createCitiesArray(data.result.records);
+    }
+    catch(error){
         alert('הייתה שגיאה!');
+
+    }
 }
 
 function createCitiesArray(array) {

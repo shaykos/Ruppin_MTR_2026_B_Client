@@ -1,3 +1,3 @@
 import { getAllCities } from './functions.js';
 
-window.addEventListener('load', getAllCities);
+window.addEventListener('DOMContentLoaded', getAllCities);

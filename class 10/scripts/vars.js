@@ -1,0 +1,1 @@
+export const map = L.map('map');
